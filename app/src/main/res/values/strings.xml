@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Quiz Bandeiras</string>
+    <string name="nome_jogador">Nome do jogador</string>
+    <string name="dificuldade">Dificuldade</string>
+    <string name="dif_facil">Fácil</string>
+    <string name="dif_media">Médio</string>
+    <string name="dif_dificil">Dificíl</string>
+    <string name="jogar">Jogar!</string>
+    <string name="Devs">Desenvolvedores</string>
+    <string name="qual_pais">Que país é esse?</string>
+    <string name="conf_resposta">Confirmar resposta</string>
+    <string name="tent_novamente">Tentar novamente</string>
+    <string name="sair_menu">Menu principal</string>
+    <string name="round_contador">%1$d/10</string>
+    <string name="sair">Sair</string>
+</resources>
