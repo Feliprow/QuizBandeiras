@@ -9,12 +9,12 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_desenvolvedores"
         android:layout_width="278dp"
         android:layout_height="50dp"
         android:layout_marginBottom="28dp"
         android:fontFamily="@font/excalifont_regular"
-        android:text="@string/Devs"
+        android:text="@string/devs"
         android:textColor="@color/texto_secundario"
         android:textSize="20sp"
         app:backgroundTint="@color/fundo_card"
@@ -23,29 +23,33 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="@color/texto_secundario"
-        app:strokeWidth="5px" />
+        app:strokeWidth="5dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_jogar"
         android:layout_width="278dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="52dp"
         android:fontFamily="@font/excalifont_regular"
         android:text="@string/jogar"
+        android:enabled="false"
         android:textAlignment="center"
-        android:textColor="@color/texto_principal"
+        android:textColor="@color/btn_jogar_texto"
         android:textSize="20sp"
-        app:backgroundTint="@color/cta_coral"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:backgroundTint="@color/btn_jogar_fundo"
+        app:layout_constraintTop_toBottomOf="@id/til_nome_jogador"
+        app:layout_constraintBottom_toTopOf="@+id/btn_desenvolvedores"
+        app:layout_constraintEnd_toEndOf="@+id/til_nome_jogador"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/til_nome_jogador"
+        android:layout_marginTop="16dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/iv_sair"
         android:layout_width="98dp"
         android:layout_height="92dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/sair"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,46 +57,59 @@
         app:srcCompat="@drawable/icon_voltar" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_sair"
         android:layout_width="53dp"
         android:layout_height="38dp"
         android:layout_marginTop="80dp"
-        android:text="Sair"
+        android:text="@string/sair"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/iv_sair"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/iv_sair"
+        app:layout_constraintTop_toTopOf="@+id/iv_sair" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_nome_jogador"
         android:layout_width="277dp"
         android:layout_height="79dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="346dp">
+        app:layout_constraintTop_toBottomOf="@id/iv_trocar_icone"
+        app:layout_constraintBottom_toTopOf="@id/btn_jogar"
+        android:layout_marginTop="8dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_nome_jogador"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite seu nome"
+            android:hint="@string/hint_nome_jogador"
             android:textAlignment="center"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/iv_icone_jogador"
         android:layout_width="179dp"
         android:layout_height="152dp"
+        android:contentDescription="@string/desc_icone_jogador"
         app:srcCompat="@drawable/icon_masculino"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="144dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sair"
+        app:layout_constraintBottom_toTopOf="@id/iv_trocar_icone"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.2"
+        android:layout_marginTop="8dp" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/iv_trocar_icone"
         android:layout_width="86dp"
         android:layout_height="48dp"
+        android:contentDescription="@string/desc_trocar_icone"
         app:srcCompat="@drawable/icon_troca"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="275dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_icone_jogador"
+        app:layout_constraintBottom_toTopOf="@id/til_nome_jogador" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,86 +2,110 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_geral">
 
+    <TextView
+        android:id="@+id/tv_titulo_pontuacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_resultado"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/iv_icone_selecionado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginTop="100dp" />
+
+    <TextView
+        android:id="@+id/tv_pontuacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_label_pontos"
+        app:layout_constraintTop_toTopOf="@id/tv_label_pontos"
+        tools:text="10/10" />
+
     <Button
-        android:id="@+id/button000"
+        android:id="@+id/btn_tentar_novamente"
         android:layout_width="278dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="26dp"
         android:fontFamily="@font/excalifont_regular"
-        android:text="Tentar novamente"
+        android:text="@string/tent_novamente"
         android:textColor="@color/texto_principal"
         android:textSize="20sp"
         app:backgroundTint="@color/fundo_card"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_menu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_label_pontos"
         app:strokeColor="@color/texto_secundario"
-        app:strokeWidth="5px" />
+        app:strokeWidth="5dp" />
+
+    <TextView
+        android:id="@+id/tv_label_pontos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_pontos"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_tentar_novamente"
+        app:layout_constraintEnd_toStartOf="@id/tv_pontuacao"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nome_jogador" />
+
+    <TextView
+        android:id="@+id/tv_nome_jogador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_label_pontos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_icone_selecionado"
+        tools:text="Nome do Jogador" />
+
+    <ImageView
+        android:id="@+id/iv_icone_selecionado"
+        android:layout_width="175dp"
+        android:layout_height="202dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/desc_icone_jogador"
+        app:layout_constraintBottom_toTopOf="@id/tv_nome_jogador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo_pontuacao"
+        app:srcCompat="@drawable/icon_masculino" />
 
     <Button
-        android:id="@+id/butto"
+        android:id="@+id/btn_menu"
         android:layout_width="278dp"
         android:layout_height="50dp"
         android:layout_marginBottom="72dp"
         android:fontFamily="@font/excalifont_regular"
-        android:text="Menu"
+        android:text="@string/menu"
+        android:contentDescription="@string/sair_menu"
         android:textColor="@color/fundo_card"
         android:textSize="20sp"
         app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="@color/texto_secundario"
-        app:strokeWidth="5px" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="175dp"
-        android:layout_height="202dp"
-        app:srcCompat="@drawable/icon_masculino"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="171dp" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pontos:"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="428dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="<Nome jogador>"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="380dp" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="<pontuaçao>"
-        android:textSize="20sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="428dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pontuação"
-        android:textSize="40sp"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="83dp" />
+        app:strokeWidth="5dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

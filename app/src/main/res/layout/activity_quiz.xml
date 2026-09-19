@@ -2,120 +2,122 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_geral">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="278dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="28dp"
-        android:fontFamily="@font/excalifont_regular"
-        android:text="Confirmar"
-        android:textColor="@color/fundo_card"
-        android:textSize="20sp"
-        app:backgroundTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/texto_secundario"
-        app:strokeWidth="5px" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="278dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="340dp"
-        android:fontFamily="@font/excalifont_regular"
-        android:text="pais 1"
-        android:textColor="@color/texto_secundario"
-        android:textSize="20sp"
-        app:backgroundTint="@color/fundo_card"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/texto_secundario"
-        app:strokeWidth="5px" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="278dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="268dp"
-        android:fontFamily="@font/excalifont_regular"
-        android:text="pais 2"
-        android:textColor="@color/texto_secundario"
-        android:textSize="20sp"
-        app:backgroundTint="@color/fundo_card"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/texto_secundario"
-        app:strokeWidth="5px" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="278dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="204dp"
-        android:fontFamily="@font/excalifont_regular"
-        android:text="pais 3"
-        android:textColor="@color/texto_secundario"
-        android:textSize="20sp"
-        app:backgroundTint="@color/fundo_card"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/texto_secundario"
-        app:strokeWidth="5px" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="278dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="136dp"
-        android:fontFamily="@font/excalifont_regular"
-        android:text="pais 4"
-        android:textColor="@color/texto_secundario"
-        android:textSize="20sp"
-        app:backgroundTint="@color/fundo_card"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/texto_secundario"
-        app:strokeWidth="5px" />
-
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/iv_voltar"
         android:layout_width="84dp"
         android:layout_height="84dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/desc_sair_partida"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon_voltar" />
 
-    <ViewSwitcher
+    <TextView
+        android:id="@+id/tv_pergunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/qual_pais"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/iv_bandeira_atual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_voltar"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/iv_bandeira_atual"
         android:layout_width="244dp"
         android:layout_height="165dp"
         android:background="@color/cta_coral_tint"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="149dp" />
+        android:contentDescription="@string/desc_bandeira"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_pergunta"
+        app:layout_constraintBottom_toTopOf="@id/rg_opcoes"
+        android:layout_marginTop="16dp" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/rg_opcoes"
+        android:layout_width="278dp"
         android:layout_height="wrap_content"
-        android:text="@string/qual_pais"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_bandeira_atual"
+        app:layout_constraintBottom_toTopOf="@id/btn_confirmar"
+        android:layout_marginTop="24dp">
+
+        <RadioButton
+            android:id="@+id/rb_opcao_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/excalifont_regular"
+            android:textColor="@color/texto_principal"
+            android:textSize="20sp"
+            android:buttonTint="@color/cta_coral"
+            tools:text="País 1" />
+
+        <RadioButton
+            android:id="@+id/rb_opcao_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/excalifont_regular"
+            android:textColor="@color/texto_principal"
+            android:textSize="20sp"
+            android:buttonTint="@color/cta_coral"
+            tools:text="País 2" />
+
+        <RadioButton
+            android:id="@+id/rb_opcao_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/excalifont_regular"
+            android:textColor="@color/texto_principal"
+            android:textSize="20sp"
+            android:buttonTint="@color/cta_coral"
+            tools:text="País 3" />
+
+        <RadioButton
+            android:id="@+id/rb_opcao_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/excalifont_regular"
+            android:textColor="@color/texto_principal"
+            android:textSize="20sp"
+            android:buttonTint="@color/cta_coral"
+            tools:text="País 4" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_confirmar"
+        android:layout_width="278dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/excalifont_regular"
+        android:text="@string/confirmar"
+        android:contentDescription="@string/conf_resposta"
+        android:enabled="false"
+        android:textColor="@color/btn_confirmar_texto"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="123dp"
-        tools:layout_editor_absoluteY="108dp" />
+        app:backgroundTint="@color/btn_confirmar_fundo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/texto_secundario"
+        app:strokeWidth="5dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

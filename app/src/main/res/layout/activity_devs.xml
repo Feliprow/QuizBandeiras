@@ -2,15 +2,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fundo_geral">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/iv_voltar"
         android:layout_width="88dp"
         android:layout_height="78dp"
         android:layout_marginTop="24dp"
+        android:contentDescription="@string/desc_voltar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,9 +20,10 @@
         app:srcCompat="@drawable/icon_voltar" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/iv_icone_dev"
         android:layout_width="167dp"
         android:layout_height="158dp"
+        android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,97 +31,102 @@
         app:layout_constraintVertical_bias="0.141"
         app:srcCompat="@drawable/icon_dev" />
 
-    <androidx.constraintlayout.helper.widget.Layer android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <androidx.constraintlayout.helper.widget.Layer android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_cargo_felipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="&quot;Desenvolvedor&quot;"
+        android:text="@string/cargo_desenvolvedor"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nome_felipe"
         app:layout_constraintHorizontal_bias="0.318"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        tools:layout_editor_absoluteY="354dp" />
+        app:layout_constraintStart_toStartOf="@+id/tv_nome_felipe"
+        app:layout_constraintTop_toTopOf="@id/iv_foto_felipe"
+        android:layout_marginTop="8dp" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/iv_foto_victor"
         android:layout_width="119dp"
         android:layout_height="109dp"
         android:scaleType="centerCrop"
+        android:contentDescription="@string/desc_foto_victor"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Circle"
         app:srcCompat="@drawable/victor_circular"
         app:strokeColor="@color/cta_coral"
         app:strokeWidth="2dp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="502dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_foto_felipe"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="46dp" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/tv_cargo_victor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="&quot;Desenvolvedor&quot;"
+        android:text="@string/cargo_desenvolvedor"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="@+id/tv_nome_victor"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView17"
-        tools:layout_editor_absoluteY="502dp" />
+        app:layout_constraintStart_toStartOf="@+id/tv_nome_victor"
+        app:layout_constraintTop_toTopOf="@id/iv_foto_victor"
+        android:layout_marginTop="8dp" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/iv_foto_felipe"
         android:layout_width="119dp"
         android:layout_height="110dp"
         android:scaleType="centerCrop"
+        android:contentDescription="@string/desc_foto_felipe"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Circle"
         app:srcCompat="@drawable/feliprow_circular"
         app:strokeColor="@color/cta_coral"
         app:strokeWidth="2dp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="346dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_icone_dev"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/tv_nome_victor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="&quot;Victor Oliveira&quot;"
+        android:text="@string/nome_dev_victor"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintEnd_toEndOf="@+id/tv_rgm_victor"
         app:layout_constraintHorizontal_bias="0.272"
-        app:layout_constraintStart_toStartOf="@+id/textView18"
-        tools:layout_editor_absoluteY="553dp" />
+        app:layout_constraintStart_toStartOf="@+id/tv_rgm_victor"
+        app:layout_constraintTop_toBottomOf="@id/tv_cargo_victor"
+        android:layout_marginTop="10dp" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tv_rgm_felipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="&quot;RGM: 44076916&quot;"
-        tools:layout_editor_absoluteX="184dp"
-        tools:layout_editor_absoluteY="435dp" />
+        android:text="@string/rgm_felipe"
+        app:layout_constraintStart_toEndOf="@id/iv_foto_felipe"
+        app:layout_constraintTop_toBottomOf="@id/tv_nome_felipe"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/tv_rgm_victor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="&quot;RGM: 42080657&quot;"
-        tools:layout_editor_absoluteX="179dp"
-        tools:layout_editor_absoluteY="590dp" />
+        android:text="@string/rgm_victor"
+        app:layout_constraintStart_toEndOf="@id/iv_foto_victor"
+        app:layout_constraintTop_toBottomOf="@id/tv_nome_victor"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_nome_felipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="&quot;Felipe Neres Vieira&quot;"
-        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        android:text="@string/nome_dev_felipe"
+        app:layout_constraintEnd_toEndOf="@+id/tv_rgm_felipe"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        tools:layout_editor_absoluteY="395dp" />
-
-    <androidx.constraintlayout.widget.Barrier android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        app:layout_constraintStart_toStartOf="@+id/tv_rgm_felipe"
+        app:layout_constraintTop_toBottomOf="@id/tv_cargo_felipe"
+        android:layout_marginTop="10dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
