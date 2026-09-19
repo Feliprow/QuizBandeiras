@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_dialog_mensagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/excalifont_regular"
+        android:gravity="center"
+        android:text="@string/dialog_sair_mensagem"
+        android:textColor="@color/texto_principal"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_dialog_sim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/excalifont_regular"
+            android:text="@string/dialog_sair_sim"
+            android:textColor="@color/texto_principal"
+            android:textSize="16sp"
+            app:backgroundTint="@color/fundo_card"
+            app:strokeColor="@color/texto_secundario"
+            app:strokeWidth="3dp" />
+
+        <Button
+            android:id="@+id/btn_dialog_nao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1.6"
+            android:fontFamily="@font/excalifont_regular"
+            android:text="@string/dialog_sair_nao"
+            android:textColor="@color/texto_principal"
+            android:textSize="16sp"
+            app:backgroundTint="@color/cta_coral" />
+
+    </LinearLayout>
+
+</LinearLayout>
