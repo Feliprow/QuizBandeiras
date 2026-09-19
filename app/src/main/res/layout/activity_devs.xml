@@ -46,7 +46,7 @@
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_foto_victor"
         android:layout_width="119dp"
-        android:layout_height="109dp"
+        android:layout_height="119dp"
         android:scaleType="centerCrop"
         android:contentDescription="@string/desc_foto_victor"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Circle"
@@ -74,7 +74,7 @@
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_foto_felipe"
         android:layout_width="119dp"
-        android:layout_height="110dp"
+        android:layout_height="119dp"
         android:scaleType="centerCrop"
         android:contentDescription="@string/desc_foto_felipe"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Circle"
