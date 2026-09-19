@@ -22,6 +22,7 @@
     <string name="tent_novamente">Tentar novamente</string>
     <string name="sair_menu">Menu principal</string>
     <string name="pontuacao_formato">%1$d/10</string>
+    <string name="rodada_formato">%1$d/%2$d</string>
     <string name="sair">Sair</string>
     <string name="cargo_desenvolvedor">\"Desenvolvedor\"</string>
     <string name="nome_dev_felipe">\"Felipe Neres Vieira\"</string>

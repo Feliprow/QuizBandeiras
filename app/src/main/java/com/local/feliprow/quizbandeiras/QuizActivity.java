@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.OnBackPressedCallback;
@@ -26,6 +27,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private ImageView ivVoltar;
     private ImageView ivBandeiraAtual;
+    private TextView tvContadorRodada;
     private RadioGroup rgOpcoes;
     private RadioButton[] rbOpcoes;
     private Button btnConfirmar;
@@ -52,6 +54,7 @@ public class QuizActivity extends AppCompatActivity {
 
         ivVoltar = findViewById(R.id.iv_voltar);
         ivBandeiraAtual = findViewById(R.id.iv_bandeira_atual);
+        tvContadorRodada = findViewById(R.id.tv_contador_rodada);
         rgOpcoes = findViewById(R.id.rg_opcoes);
         rbOpcoes = new RadioButton[]{
                 findViewById(R.id.rb_opcao_1),
@@ -104,6 +107,7 @@ public class QuizActivity extends AppCompatActivity {
         opcoes.addAll(erradas.subList(0, 3));
         Collections.shuffle(opcoes);
 
+        tvContadorRodada.setText(getString(R.string.rodada_formato, rodadaAtual + 1, TOTAL_RODADAS));
         ivBandeiraAtual.setImageResource(paisCorreto.getBandeira());
         rgOpcoes.clearCheck();
         for (int i = 0; i < rbOpcoes.length; i++) {

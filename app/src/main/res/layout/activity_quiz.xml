@@ -20,6 +20,18 @@
         app:srcCompat="@drawable/icon_voltar" />
 
     <TextView
+        android:id="@+id/tv_contador_rodada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/texto_secundario"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_voltar"
+        tools:text="1/10" />
+
+    <TextView
         android:id="@+id/tv_pergunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
