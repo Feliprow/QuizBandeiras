@@ -12,7 +12,7 @@ public class DevsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_devs);
 
-        //  fecha esta tela e volta para a MainActivity
+        // Voltar: fecha esta tela e volta para a MainActivity
         ImageView ivVoltar = findViewById(R.id.iv_voltar);
         ivVoltar.setOnClickListener(v -> finish());
     }

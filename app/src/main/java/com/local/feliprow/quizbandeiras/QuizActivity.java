@@ -76,7 +76,7 @@ public class QuizActivity extends AppCompatActivity {
         mostrarRodada();
     }
 
-    // Sorteia os 10 países da partida entre os 84 disponíveis
+    // Sorteia os 10 países da partida entre os 60 disponíveis
     private void sortearPartida() {
         todosPaises = BancoPaises.getTodos();
         List<Pais> embaralhados = new ArrayList<>(todosPaises);
