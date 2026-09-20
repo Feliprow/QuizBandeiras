@@ -37,10 +37,9 @@
         android:layout_height="wrap_content"
         android:text="@string/cargo_desenvolvedor"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_nome_felipe"
-        app:layout_constraintHorizontal_bias="0.318"
-        app:layout_constraintStart_toStartOf="@+id/tv_nome_felipe"
+        app:layout_constraintStart_toEndOf="@id/iv_foto_felipe"
         app:layout_constraintTop_toTopOf="@id/iv_foto_felipe"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="8dp" />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -63,12 +62,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cargo_desenvolvedor"
-        android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/tv_nome_victor"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tv_nome_victor"
+        app:layout_constraintStart_toEndOf="@id/iv_foto_victor"
         app:layout_constraintTop_toTopOf="@id/iv_foto_victor"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="8dp" />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -91,11 +88,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nome_dev_victor"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/tv_rgm_victor"
-        app:layout_constraintHorizontal_bias="0.272"
-        app:layout_constraintStart_toStartOf="@+id/tv_rgm_victor"
+        app:layout_constraintStart_toEndOf="@id/iv_foto_victor"
         app:layout_constraintTop_toBottomOf="@id/tv_cargo_victor"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp" />
 
     <TextView
@@ -123,10 +118,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nome_dev_felipe"
-        app:layout_constraintEnd_toEndOf="@+id/tv_rgm_felipe"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/tv_rgm_felipe"
+        app:layout_constraintStart_toEndOf="@id/iv_foto_felipe"
         app:layout_constraintTop_toBottomOf="@id/tv_cargo_felipe"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
